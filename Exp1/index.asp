@@ -9,6 +9,7 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/tinybox.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,8 @@
 <div id="content"><!-- InstanceBeginEditable name="EditRegion3" -->
   <div class="left_right">
     <div class="left_right_top">此处显示  class "left_right_top" 的内容</div>
-    <div class="left_right_bottom">此处显示  class "left_right_bottom" 的内容</div>
+    <div class="left_right_bottom">
+    </div>
   </div>
   <div id="center">
     <div id="center_top">此处显示  id "center_top" 的内容</div>
@@ -35,9 +37,13 @@
  flashvars="isAutoPlay=true"  allowFullScreen="true" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
   </div>
     <div class="left_right_bottom">
-    阿斯顿发
+    <a href="2013082401/index.html">jQuery实现的弹出层效果 在线演示效果</a>
+    <a href="#" id="click_test1">效果预览</a>
     </div>
   </div>
+  <script type="text/javascript">
+  	T$('click_test1').onclick = function(){TINY.box.show('test.html',1,300,150,1)}
+  </script>
 <!-- InstanceEndEditable --></div>
 <div id="footer">CopeRight@wolfogre<br />
 <a href="http://blog.wolfogre.com">wolfogre.com</a>

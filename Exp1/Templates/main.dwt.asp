@@ -9,10 +9,10 @@
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/tinybox.js"></script>
 </head>
 
-<body>
+<body onload="divopen()">
+
 <div id="header">
 	<img src="../images/Icon.jpg" id="logo"><img src="../images/banner.jpg" id="banner"></img>
 </div>

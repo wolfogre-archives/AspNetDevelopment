@@ -3,15 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main.dwt.asp" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-2.2.3.js" type="text/javascript"></script>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>实验1</title>
 <Script Language="javascript">  
 	function divopen(){
-		document.getElementById('light').style.display='block';
-		document.getElementById('fade').style.display='block';
-		console.log("js执行了");
+		$("#light").css("display","block");
+		$("#fade").css("display","block");
 	}
-	console.log("js执行了1");
 	var showad = true;
 var Toppx = 60;			//上端位置
 var AdDivW = 100;		//宽度
@@ -28,24 +27,24 @@ if(!showad){return;}
 if (window.screen.width<MinScreenW){
 alert("临时提示：\n\n显示器分辨率宽度小于"+MinScreenW+",不显示广告");
 showad = false;
-document.getElementById("LeftDiv").style.display="none";
-document.getElementById("RightDiv").style.display="none";
+$("#LeftDiv").css("display","none");
+$("#RightDiv").css("display","none");
 return;
 }
 var Borderpx = ((window.screen.width-PageWidth)/2-AdDivW)/2;
 console.log(document.getElementById("LeftDiv"));
-document.getElementById("LeftDiv").style.display="";
-document.getElementById("LeftDiv").style.top=document.body.scrollTop+Toppx + "px";
-document.getElementById("LeftDiv").style.left=document.body.scrollLeft+Borderpx + "px";
-document.getElementById("RightDiv").style.display="";
-document.getElementById("RightDiv").style.top=document.body.scrollTop+Toppx + "px";
-document.getElementById("RightDiv").style.left=document.body.scrollLeft+document.body.clientWidth-document.getElementById("RightDiv").offsetWidth-Borderpx + "px";
+$("#LeftDiv").css("display","");
+$("#LeftDiv").css("top",document.body.scrollTop+Toppx + "px");
+$("#LeftDiv").css("left",document.body.scrollLeft+Borderpx + "px");
+$("#RightDiv").css("display","");
+$("#RightDiv").css("top",document.body.scrollTop+Toppx + "px");
+$("#RightDiv").css("left",document.body.scrollLeft+document.body.clientWidth-document.getElementById("RightDiv").offsetWidth-Borderpx + "px");
 }
 function hidead()
 {
 showad = false;
-document.getElementById("LeftDiv").style.display="none";
-document.getElementById("RightDiv").style.display="none";
+$("#LeftDiv").css("display","none");
+$("#RightDiv").css("display","none");
 }
 window.onscroll=scall;
 window.onresize=scall;
